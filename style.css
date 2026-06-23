@@ -1,0 +1,182 @@
+:root {
+    --primary: #8c2a1c; /* Terracotta / History theme */
+    --primary-light: #ab3e2e;
+    --dark: #2c1a17;
+    --light: #f5f0eb; /* Sand color */
+    --accent: #d4af37; /* Old gold */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 80px 0 100px;
+    text-align: center;
+    position: relative;
+    border-bottom: 8px solid var(--accent);
+    overflow: hidden;
+}
+
+.hero-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.05;
+    background-image: radial-gradient(var(--accent) 2px, transparent 2px);
+    background-size: 30px 30px;
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.org-list {
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.org-list p {
+    margin-bottom: 5px;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--accent);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.event-info {
+    display: inline-flex;
+    gap: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent);
+    color: var(--dark);
+    padding: 15px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #f0c94e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.committees {
+    padding: 80px 0;
+}
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.committee-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary);
+}
+
+.committee-card h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid var(--light);
+    padding-bottom: 15px;
+}
+
+.members-list {
+    list-style: none;
+}
+
+.members-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e0d5c1;
+    font-size: 1.1rem;
+}
+
+.members-list li:last-child {
+    border-bottom: none;
+}
+
+.members-list strong {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+footer {
+    background-color: var(--dark);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    .event-info {
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 15px;
+    }
+}
